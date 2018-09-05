@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">MoviesDB</string>
+    <string name="movie_poster">Movie Poster</string>
+    <string name="search">Search</string>
+    <string name="enter_movie_name">Enter Movie Name</string>
+    <string name="view">View</string>
+    <string name="enter_image_url">Enter image URL</string>
+    <string name="save">Save</string>
+    <string name="youtube">YouTube</string>
+    <string name="movie_overview">movie overview</string>
+    <string name="watched">watched</string>
+    <string name="shoot">shoot</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="delete_all">Delete All</string>
+    <string name="add_web">Add Web</string>
+    <string name="add_manual">Add Manual</string>
+    <string name="share">Share</string>
+    <string name="movie_photo">movie photo</string>
+    <string name="cancel">Cancel</string>
+</resources>

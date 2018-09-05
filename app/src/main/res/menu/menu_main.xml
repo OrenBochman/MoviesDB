@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.oren.myfab.MainActivity"
+    tools:keep="@menu/menu_main">
+    <item
+        android:id="@+id/ActionDeleteAll"
+        android:icon="@android:drawable/ic_delete"
+        android:orderInCategory="101"
+        android:title="@string/delete_all" />
+    <item
+        android:id="@+id/ActionAddWeb"
+        android:orderInCategory="102"
+        android:title="@string/add_web" />
+    <item
+        android:id="@+id/ActionAddManual"
+        android:orderInCategory="103"
+        android:title="@string/add_manual" />
+</menu>

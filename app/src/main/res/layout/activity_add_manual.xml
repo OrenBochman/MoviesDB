@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".activities.AddManualActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarManual"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimaryDark"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!-- Start Main Content -->
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:background="@color/colorPrimary">
+
+        <EditText
+            android:id="@+id/manualEditTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="@string/enter_movie_name"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/holo_green_light"
+            android:textColorHint="@android:color/holo_green_light"
+            app:layout_constraintBottom_toTopOf="@+id/manualEditImageUrl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread_inside"
+            tools:targetApi="o" />
+
+        <EditText
+            android:id="@+id/manualEditImageUrl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="@string/enter_image_url"
+            android:inputType="textUri"
+            android:textColor="@android:color/holo_green_light"
+            android:textColorHint="@android:color/holo_green_light"
+            app:layout_constraintBottom_toTopOf="@+id/manualImageView"
+            app:layout_constraintEnd_toStartOf="@+id/manualButtonShow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/manualEditTitle" />
+
+        <Button
+            android:id="@+id/manualButtonShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/view"
+            android:textColor="@android:color/holo_green_light"
+            android:textColorHint="@android:color/holo_green_light"
+            app:layout_constraintBaseline_toBaselineOf="@+id/manualEditImageUrl"
+            app:layout_constraintEnd_toStartOf="@+id/manualButtonShoot"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/manualEditImageUrl" />
+
+        <ImageButton
+            android:id="@+id/manualButtonShoot"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/colorPrimaryDark"
+            android:contentDescription="@string/movie_photo"
+            android:padding="8dp"
+            android:text="@string/shoot"
+            app:layout_constraintBottom_toBottomOf="@+id/manualButtonShow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/manualButtonShow"
+            app:layout_constraintTop_toTopOf="@+id/manualButtonShow"
+            app:srcCompat="@drawable/ic_photo_camera_white_24dp" />
+
+        <ImageView
+            android:id="@+id/manualImageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/movie_poster"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/manualEditImageUrl"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:srcCompat="@drawable/ic_movies_24px" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".65" />
+
+        <EditText
+            android:id="@+id/manualEditOverview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:hint="@string/movie_overview"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:lines="2"
+            android:singleLine="false"
+            android:text="@string/movie_overview"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@android:color/holo_green_light"
+            android:textColorHint="@android:color/holo_green_light"
+            app:layout_constraintBottom_toTopOf="@+id/manualRatingBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/manualImageView"
+            tools:targetApi="o" />
+
+        <RatingBar
+            android:id="@+id/manualRatingBar"
+            style="@style/Widget.AppCompat.RatingBar.Indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:isIndicator="false"
+            android:numStars="5"
+            android:rating="3"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:stepSize="0.5"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/manualButtonSave"
+            app:layout_constraintEnd_toStartOf="@+id/manualSwitchWatched"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/manualEditOverview" />
+
+        <Switch
+            android:id="@+id/manualSwitchWatched"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="@string/watched"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@android:color/holo_green_light"
+            app:layout_constraintBottom_toBottomOf="@+id/manualRatingBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/manualRatingBar"
+            app:layout_constraintTop_toTopOf="@+id/manualRatingBar" />
+
+        <ImageButton
+            android:id="@+id/manualButtonShare"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorPrimaryDark"
+            android:contentDescription="@string/share"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/manualButtonSave"
+            app:layout_constraintEnd_toStartOf="@+id/manualButtonYouTube"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/manualButtonSave"
+            app:srcCompat="@drawable/ic_share_white_24dp" />
+
+        <ImageButton
+            android:id="@+id/manualButtonYouTube"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorPrimaryDark"
+            android:contentDescription="@string/youtube"
+            android:cropToPadding="false"
+            android:padding="8dp"
+            android:tint="?attr/colorError"
+            app:layout_constraintBottom_toBottomOf="@+id/manualButtonSave"
+            app:layout_constraintEnd_toStartOf="@+id/manualButtonSave"
+            app:layout_constraintStart_toEndOf="@+id/manualButtonShare"
+            app:layout_constraintTop_toTopOf="@+id/manualButtonSave"
+            app:srcCompat="@drawable/ic_youtube_bw" />
+
+        <Button
+            android:id="@+id/manualButtonSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/save"
+            android:textColor="@android:color/holo_green_light"
+            android:textColorHint="@android:color/holo_green_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/manualButtonYouTube"
+            app:layout_constraintTop_toBottomOf="@+id/manualRatingBar" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.design.widget.CoordinatorLayout>
